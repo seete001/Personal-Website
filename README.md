@@ -2,7 +2,7 @@ Personal Website
 
 My personal portfolio website built with React and Vite.
 
-----Tech Stack----
+'''Tech Stack'''
 
 React
 Vite
