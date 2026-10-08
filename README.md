@@ -36,4 +36,4 @@ npm run build
 The website is deployed using Vercel.
 
 
-*Website URL* : [sepehr-etemadi-delta-bice.vercel.app]
+*Website URL* : (sepehr-etemadi-delta-bice.vercel.app)
