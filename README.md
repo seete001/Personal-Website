@@ -1,39 +1,34 @@
-**Personal Website**
+# Personal Website
 
-My personal portfolio website built with React and Vite.
+A personal portfolio website built with **React**, **TypeScript**, and **Vite**.
 
-***Tech Stack***
+## Features
 
-React
-Vite
-CSS
-Vercel
-#Features
-Personal introduction
-Projects showcase
-Social links
-Responsive design
-Dark theme
+- Responsive design with a dark theme
+- Projects fetched from the GitHub API
+- Minimal design with blue accents
 
-***Development***
+## Tech Stack
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/)
+- CSS
+
+## Getting Started
 
 Clone the repository and install the dependencies:
 
+```bash
 npm install
-
 
 Start the development server:
 
 npm run dev
 
-
-Build for production:
+Build
+Create a production build:
 
 npm run build
-
-***Deployment***
-
-The website is deployed using Vercel.
-
-
-*Website URL* : (sepehr-etemadi-delta-bice.vercel.app)
+```
+***Author*** : ***Sepehr***:)
