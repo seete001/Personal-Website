@@ -1,4 +1,15 @@
+import { getRepos } from "../github";
+import { useState, useEffect } from "react";
+
 function Projects() {
+    
+    const [repos, setRepos] = useState([]);
+
+    useEffect(() => {
+      getRepos().then((data) =>setRepos(data)).catch((error) => console.error(error));
+    }, []);
+
+    
     return (
       <section>
         <h2>Projects</h2>
@@ -21,6 +32,13 @@ function Projects() {
             Worked on website using JavaScript, HTML, and CSS.
           </p>
         </article>
+        {repos.map((repo) => (
+          <article key={repo.id}>
+            <h3>{repo.name}</h3>
+            <p>{repo.description || ""}</p>
+            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">On Git</a>
+          </article>
+        ))}
       </section>
     );
   }
