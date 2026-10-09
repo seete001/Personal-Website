@@ -1,12 +1,14 @@
-import { getRepos } from "../github";
+import { getRepos , type Repo} from "../github";
 import { useState, useEffect } from "react";
 
 function Projects() {
     
-    const [repos, setRepos] = useState([]);
+    const [repos, setRepos] = useState<Repo []>([]);
 
     useEffect(() => {
-      getRepos().then((data) =>setRepos(data)).catch((error) => console.error(error));
+      getRepos()
+        .then(setRepos)
+        .catch((error: unknown) => console.error("Failed to load repos:", error));
     }, []);
 
     
@@ -14,7 +16,9 @@ function Projects() {
       <section>
         <h2>Projects</h2>
 
-        {repos.filter((repo) => repo.topics?.includes("production")).map((repo) => (
+        {repos
+          .filter((repo) => repo.topics?.includes("production"))
+          .map((repo) => (
           <article key={repo.id}>
             <h3>{repo.name}</h3>
             <p className="date">
@@ -23,8 +27,10 @@ function Projects() {
               year: "numeric",
               })}
             </p>
-            <p>{repo.description || ""}</p>
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">On Git</a>
+            <p>{repo.description ?? ""}</p>
+            <a href={repo.html_url} 
+               target="_blank" 
+               rel="noopener noreferrer">On Git</a>
           </article>
         ))}
       </section>

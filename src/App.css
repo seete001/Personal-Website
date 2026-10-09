@@ -139,6 +139,38 @@ article p {
   font-size: 14px;
 }
 
+/* -------------------- Footer -------------------- */
+
+.footer { 
+  width: min(100% - 40px, 900px); 
+  margin: 70px auto 0; 
+  padding: 24px 0; 
+  border-top: 1px solid #27272a;
+
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 16px;
+  
+  color: #a1a1aa; 
+  font-size: 13px; 
+}
+  
+  .footer p { 
+    margin: 0; 
+    line-height: 1.6; 
+  }
+  
+  .footer a { 
+    color: #a1a1aa; 
+    text-decoration: none; 
+    transition: color 0.2s ease; 
+  }
+  
+  .footer a:hover { 
+    color: #60a5fa; 
+  }
+  
 /* --------------------
    Mobile
 -------------------- */
@@ -167,4 +199,16 @@ article p {
   article {
     padding: 22px;
   }
+}
+
+@media (max-width: 600px) { 
+  .footer { 
+    width: min(100% - 30px, 900px); 
+    margin-top: 50px; 
+    padding: 20px 0;
+
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 8px; 
+  } 
 }
