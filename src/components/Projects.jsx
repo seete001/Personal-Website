@@ -32,7 +32,7 @@ function Projects() {
             Worked on website using JavaScript, HTML, and CSS.
           </p>
         </article>
-        {repos.map((repo) => (
+        {repos.filter((repo) => repo.topics?.includes("production")).map((repo) => (
           <article key={repo.id}>
             <h3>{repo.name}</h3>
             <p>{repo.description || ""}</p>
